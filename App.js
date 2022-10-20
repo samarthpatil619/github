@@ -14,10 +14,9 @@ export default function App()
 
 
 
-
+//creating function to input uname, password, email and mobile
 
 function MyComponent() {
-
 
 const [name, setUsername] = useState("");
 const[password, setUserpassword  ]=useState("");
@@ -70,6 +69,7 @@ const addUser = async () => {
   const result = await fetch(url);
   const list = await result.json();
 
+  
   const newList = [...list];
   setList(newList);
 };
@@ -77,6 +77,7 @@ const addUser = async () => {
     <div className="container-fluid bg-danger">
       <div className="row">
         <div className="col text-center bg-warning">
+  //Code to input credentials (uname,pass,email, mobile)
   <h1>User Registration</h1>
     <div>
       <input type="text" name="" id="" value={name} onChange={handleUsername} />
